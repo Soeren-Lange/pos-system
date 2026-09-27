@@ -1,11 +1,12 @@
 import { Button } from "./ui/button.tsx";
 
+
 export default function ButtonMatrix({
-                                         numpadKeys,
+                                         buttonNames,
                                          rowSize,
                                          onClicks
                                      }: {
-    numpadKeys: number[];
+    buttonNames: string[];
     rowSize: number;
     onClicks: (() => void)[];
 }) {
@@ -14,8 +15,8 @@ export default function ButtonMatrix({
             className="grid gap-1"
             style={{ gridTemplateColumns: `repeat(${rowSize}, minmax(0, 1fr))` }}
         >
-            {numpadKeys.map((value, index) => (
-                <Button key={value} size="lg" onClick={onClicks[index]}>
+            {buttonNames.map((value, index) => (
+                <Button key={value} size="tapButton" onClick={onClicks[index]}>
                     {value}
                 </Button>
             ))}
