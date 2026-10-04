@@ -5,7 +5,7 @@ export default function NumpadAndPriceField(){
     return(
         <div className="w-4/12">
         <div className="w-full flex justify-end">
-            <text className="mr-3 mb-2 mt-2 text-3xl">text</text>
+            <span className="mr-3 mb-2 mt-2 text-3xl">"</span>
         </div>
         <div className="flex flex-row">
             <div className="w-3/4 ml-1 mb-1" >
