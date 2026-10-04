@@ -27,19 +27,19 @@ export function ButtonMatrixMultipleLambda({
 export function ButtonMatrixSingleLambda({
                                          buttonNames,
                                          rowSize,
-                                         onClicks
+                                         onClick
                                      }: {
     buttonNames: string[];
     rowSize: number;
-    onClicks: (() => void)[];
+    onClick: (() => void);
 }) {
     return (
         <div
             className="grid gap-1"
             style={{ gridTemplateColumns: `repeat(${rowSize}, minmax(0, 1fr))` }}
         >
-            {buttonNames.map((value, index) => (
-                <Button key={value} size="tapButton" onClick={onClicks[index]}>
+            {buttonNames.map(value => (
+                <Button key={value} size="tapButton" onClick={onClick}>
                     {value}
                 </Button>
             ))}
