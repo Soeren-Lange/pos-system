@@ -1,7 +1,7 @@
 import { Button } from "./ui/button.tsx";
 
 
-export default function ButtonMatrix({
+export function ButtonMatrixMultipleLambda({
                                          buttonNames,
                                          rowSize,
                                          onClicks
