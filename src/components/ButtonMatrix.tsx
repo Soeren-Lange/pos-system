@@ -31,7 +31,7 @@ export function ButtonMatrixSingleLambda({
                                      }: {
     buttonNames: string[];
     rowSize: number;
-    onClick: (() => void);
+    onClick: ((event:React.MouseEvent<HTMLButtonElement>) => void);
 }) {
     return (
         <div
@@ -39,7 +39,7 @@ export function ButtonMatrixSingleLambda({
             style={{ gridTemplateColumns: `repeat(${rowSize}, minmax(0, 1fr))` }}
         >
             {buttonNames.map(value => (
-                <Button key={value} size="tapButton" onClick={onClick}>
+                <Button key={value} value={value} size="tapButton" onClick={onClick}>
                     {value}
                 </Button>
             ))}
