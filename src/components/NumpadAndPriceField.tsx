@@ -3,6 +3,8 @@ import {Button} from "./ui/button.tsx";
 import {type Dispatch, type SetStateAction, useState} from "react";
 
 export default function NumpadAndPriceField(){
+    const [input, setInput] = useState("0")
+
     return(
         <div style={{width: 373.5}}>
             <div className="flex-row flex justify-end m-1">
@@ -66,3 +68,8 @@ function inputEventHandle(newChar:string, setInput:Dispatch<SetStateAction<strin
             break;
     }
 
+}
+
+function addchar(setInput:Dispatch<SetStateAction<string>>, newChar:string){
+    setInput(prevState => prevState + newChar)
+}
