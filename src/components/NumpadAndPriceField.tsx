@@ -32,3 +32,37 @@ export default function NumpadAndPriceField(){
         </div>
     )
 }
+
+function inputEventHandle(newChar:string, setInput:Dispatch<SetStateAction<string>>) {
+    switch (newChar){
+        case "00":
+            addchar(setInput,newChar)
+            break;
+        case "Menge":
+            console.log(newChar)
+            //handler für product window
+            break;
+
+        case "<-":
+            setInput(prevState => {
+                if(prevState != "0"){
+                    return prevState.slice(0, -1)
+                }
+                return "0";
+            })
+
+            break;
+
+        case "Del":
+            setInput("0")
+            break;
+        default:
+            if(/^[0-9]$/.test(newChar)){
+                addchar(setInput,newChar)
+            }
+            else {
+                console.warn("Unknown input: ",newChar)
+            }
+            break;
+    }
+
