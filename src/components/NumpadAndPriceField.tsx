@@ -1,6 +1,6 @@
 import {ButtonMatrixSingleLambda} from "./ButtonMatrix.tsx";
-
 import {Button} from "./ui/button.tsx";
+import {type Dispatch, type SetStateAction, useState} from "react";
 
 export default function NumpadAndPriceField(){
     return(
@@ -24,6 +24,9 @@ export default function NumpadAndPriceField(){
                         rowSize={3}
                         onClick={(event) => inputEventHandle(event.currentTarget.value,setInput)}
                     />
+                </div>
+                <div className="ml-1">
+                    <Button size="inputButton">Eingabe</Button>
                 </div>
             </div>
         </div>
