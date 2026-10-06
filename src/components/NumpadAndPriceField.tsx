@@ -1,22 +1,31 @@
 import {ButtonMatrixSingleLambda} from "./ButtonMatrix.tsx";
 
+import {Button} from "./ui/button.tsx";
 
 export default function NumpadAndPriceField(){
     return(
-        <div className="w-4/12">
-            <div className="w-full flex justify-end">
-                <span className="mr-5 mb-2 mt-2 text-3xl">test</span>
+        <div style={{width: 373.5}}>
+            <div className="flex-row flex justify-end m-1">
+                <span className="text-3xl justify-end">{input}</span>
             </div>
-            <div className="flex flex-row justify-center">
-                <div className="ml-1 mb-1" >
+            <div className="flex flex-row">
+                <div>
                     <ButtonMatrixSingleLambda
-                    buttonNames ={["1", "2", "3", "<-" ,"4", "5", "6","Del", "7", "8", "9", "Menge"]}
+                    buttonNames ={["1", "2", "3", "<-" ,"4", "5", "6","Del"]}
                     rowSize={4}
-                    onClick={(event) => console.log(event.currentTarget.value)}
+                    onClick={(event) => inputEventHandle(event.currentTarget.value,setInput)}
                     />
                 </div>
             </div>
-
-    </div>
+            <div className="flex flex-row mt-1">
+                <div>
+                    <ButtonMatrixSingleLambda
+                        buttonNames ={["7", "8", "9", "00", "0", "Menge"]}
+                        rowSize={3}
+                        onClick={(event) => inputEventHandle(event.currentTarget.value,setInput)}
+                    />
+                </div>
+            </div>
+        </div>
     )
 }
