@@ -60,6 +60,10 @@ function inputEventHandle(newChar:string, setInput:Dispatch<SetStateAction<strin
         case "Del":
             setInput("0")
             break;
+
+        case "Eingabe":
+            console.log(newChar)
+            break;
         default:
             if(/^[0-9]$/.test(newChar)){
                 addchar(setInput,newChar)
