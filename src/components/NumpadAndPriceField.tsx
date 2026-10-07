@@ -28,7 +28,9 @@ export default function NumpadAndPriceField(){
                     />
                 </div>
                 <div className="ml-1">
-                    <Button size="inputButton">Eingabe</Button>
+                    <Button size="inputButton"
+                            value={"Eingabe"}
+                            onClick={(event) => inputEventHandle(event.currentTarget.value,setInput)}>Eingabe</Button>
                 </div>
             </div>
         </div>
