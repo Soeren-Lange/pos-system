@@ -70,7 +70,7 @@ function inputEventHandle(newChar:string, setInput:Dispatch<SetStateAction<strin
 
 }
 
-function addchar(setInput:Dispatch<SetStateAction<string>>, newChar:string){
+function addChar(setInput:Dispatch<SetStateAction<string>>, newChar:string){
 
     setInput(prevState => {
         if(prevState == "0"){
