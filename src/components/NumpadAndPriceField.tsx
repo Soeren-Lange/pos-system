@@ -40,7 +40,7 @@ export default function NumpadAndPriceField(){
 function inputEventHandle(newChar:string, setInput:Dispatch<SetStateAction<string>>) {
     switch (newChar){
         case "00":
-            addchar(setInput,newChar)
+            addChar(setInput,newChar)
             break;
         case "Menge":
             console.log(newChar)
@@ -66,7 +66,7 @@ function inputEventHandle(newChar:string, setInput:Dispatch<SetStateAction<strin
             break;
         default:
             if(/^[0-9]$/.test(newChar)){
-                addchar(setInput,newChar)
+                addChar(setInput,newChar)
             }
             else {
                 console.warn("Unknown input: ",newChar)
