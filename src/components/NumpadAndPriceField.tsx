@@ -71,5 +71,13 @@ function inputEventHandle(newChar:string, setInput:Dispatch<SetStateAction<strin
 }
 
 function addchar(setInput:Dispatch<SetStateAction<string>>, newChar:string){
-    setInput(prevState => prevState + newChar)
+
+    setInput(prevState => {
+        if(prevState == "0"){
+            return newChar;
+        }
+        else {
+            return prevState + newChar;
+        }
+    })
 }
