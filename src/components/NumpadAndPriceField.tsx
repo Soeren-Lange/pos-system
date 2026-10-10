@@ -49,7 +49,7 @@ function inputEventHandle(newChar:string, setInput:Dispatch<SetStateAction<strin
 
         case "<-":
             setInput(prevState => {
-                if(prevState != "0"){
+                if(prevState.length > 1){
                     return prevState.slice(0, -1)
                 }
                 return "0";
