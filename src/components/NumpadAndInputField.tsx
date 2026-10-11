@@ -2,7 +2,7 @@ import {ButtonMatrixSingleLambda} from "./ButtonMatrix.tsx";
 import {Button} from "./ui/button.tsx";
 import {type Dispatch, type SetStateAction, useState} from "react";
 
-export default function NumpadAndPriceField(){
+export default function NumpadAndInputField(){
     const [input, setInput] = useState("0")
 
     return(
