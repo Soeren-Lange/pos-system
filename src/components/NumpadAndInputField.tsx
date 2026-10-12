@@ -7,7 +7,7 @@ export default function NumpadAndInputField(){
 
     return(
         <div style={{width: 373.5}}>
-            <div className="flex-row flex justify-end m-1 border-1  border-y-black border-x-black rounded-lg">
+            <div className="flex-row flex justify-end m-1 border  border-y-black border-x-black rounded-lg">
                 <span className="text-3xl justify-end">{input}</span>
             </div>
             <div className="flex flex-row">
