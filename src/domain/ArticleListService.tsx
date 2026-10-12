@@ -22,3 +22,7 @@ export function ArticleListService(){
         <ArticleList articleList={articleList}/>
     )
 }
+
+export function addArticle(){
+    setArticleListHanlde?.((prevState)=> [...prevState, <span key={crypto.randomUUID()}>Hallo</span>])
+}
