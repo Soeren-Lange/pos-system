@@ -2,7 +2,7 @@
 import {type Dispatch, type ReactElement, type SetStateAction, useEffect, useState} from "react";
 import {ArticleList} from "../components/ArticleList.tsx";
 
-let setArticleListHanlde: Dispatch<SetStateAction<ReactElement[]>> | null = null
+let setArticleListHandle: Dispatch<SetStateAction<ReactElement[]>> | null = null
 
 export function ArticleListService(){
 
@@ -10,10 +10,10 @@ export function ArticleListService(){
 
     useEffect(() =>
     {
-        setArticleListHanlde = setArticleList
+        setArticleListHandle = setArticleList
 
         return () => {
-            setArticleListHanlde = null
+            setArticleListHandle = null
         }
     },[])
 
@@ -24,5 +24,5 @@ export function ArticleListService(){
 }
 
 export function addArticle(){
-    setArticleListHanlde?.((prevState)=> [...prevState, <span key={crypto.randomUUID()}>Hallo</span>])
+    setArticleListHandle?.((prevState)=> [...prevState, <span key={crypto.randomUUID()}>Hallo</span>])
 }
