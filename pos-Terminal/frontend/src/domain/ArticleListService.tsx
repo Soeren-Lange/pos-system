@@ -23,6 +23,6 @@ export function ArticleListService(){
     )
 }
 
-export function addArticle(){
-    setArticleListHandle?.((prevState)=> [...prevState, <span key={crypto.randomUUID()}>Hallo</span>])
+export function addArticle(eanCode:number){
+    
 }
