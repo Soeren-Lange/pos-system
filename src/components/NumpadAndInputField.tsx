@@ -1,6 +1,7 @@
 import {ButtonMatrixSingleLambda} from "./ButtonMatrix.tsx";
 import {Button} from "./ui/button.tsx";
 import {type Dispatch, type SetStateAction, useState} from "react";
+import {addArticle} from "../domain/ArticleListService.tsx";
 
 export default function NumpadAndInputField(){
     const [input, setInput] = useState("0")
@@ -63,6 +64,7 @@ function inputEventHandle(newChar:string, setInput:Dispatch<SetStateAction<strin
 
         case "Eingabe":
             console.log(newChar)
+            addArticle();
             break;
         default:
             if(/^[0-9]$/.test(newChar)){
